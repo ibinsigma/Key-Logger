@@ -28,7 +28,7 @@ while line:
             message = message[:-1]
         else:
             if upperCase:
-                if (key >= 10 and key <= 21) or (key in [34,35,47,48,51,59,60,61]) :
+                if (key >= 10 and key <= 21) or (key in [34,35,47,48,51,59,60,61]):
                     message += read_val(symbols, key)
                 else:
                     message += read_val(keymap, key).upper()

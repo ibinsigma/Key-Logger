@@ -22,7 +22,7 @@ while line:
     x = line.split(" ")
     key = int(x[len(x)-1])
     if(x[1] == "press"):
-        if key in  [66,50,62] :
+        if key in [66,50,62]:
             upperCase = not upperCase
         elif key == 22:
             message = message[:-1]

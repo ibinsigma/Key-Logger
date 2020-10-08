@@ -14,9 +14,6 @@ line = f.readline()
 message = ""
 upperCase = False
 
-def read_val(map_dict, key):
-    return map_dict.get(key,'')
-
 while line:
     line = line.strip()
     x = line.split(" ")
@@ -29,11 +26,11 @@ while line:
         else:
             if upperCase:
                 if (key >= 10 and key <= 21) or (key in [34,35,47,48,51,59,60,61]):
-                    message += read_val(symbols, key)
+                    message += symbols.get(key,'')
                 else:
-                    message += read_val(keymap, key).upper()
+                    message += keymap.get(key,'').upper()
             else:
-                message += read_val(keymap, key)
+                message += keymap.get(key,'')
 
     elif(x[1] == "release"):
         if key == 50 or key == 62:
